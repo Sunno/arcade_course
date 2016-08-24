@@ -26,6 +26,7 @@ while not hecho:
     for evento in pygame.event.get():
         if evento.type == pygame.QUIT:  # han pulsado la x
             hecho = True
+            pygame.quit()
     # fin procesado de eventos
 
     # Logica del juego
@@ -33,6 +34,11 @@ while not hecho:
     # fin logica del juego
 
     # codigo de dibujado
+    # Limpia la pantalla
+    pantalla.fill(BLANCO)
+
+    # Actualiza la antalla con lo que dibujamos
+    pygame.display.flip()
 
     # fin codigo de dibujado
 
